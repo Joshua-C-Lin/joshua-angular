@@ -1,4 +1,12 @@
-import { Component, Input, computed, input, Output, EventEmitter, output } from '@angular/core';
+import {
+  Component,
+  Input,
+  computed,
+  input,
+  Output,
+  EventEmitter,
+  output,
+} from '@angular/core';
 
 interface User {
   id: string;
@@ -15,7 +23,8 @@ interface User {
 })
 export class UserComponent {
   @Input({ required: true }) user!: User;
-  @Output() select = new EventEmitter<string>();  // select = output<string>();
+  @Input({ required: true }) selected!: boolean;
+  @Output() select = new EventEmitter<string>(); // select = output<string>();
 
   // imagePath = computed(() => {
   //   return 'assets/users/' + this.avatar();
