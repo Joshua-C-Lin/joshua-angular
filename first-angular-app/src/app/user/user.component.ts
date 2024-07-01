@@ -7,6 +7,7 @@ import {
   EventEmitter,
   output,
 } from '@angular/core';
+import { CardComponent } from '../shared/card/card.component';
 
 interface User {
   id: string;
@@ -17,7 +18,7 @@ interface User {
 @Component({
   selector: 'app-user',
   standalone: true,
-  imports: [],
+  imports: [CardComponent],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css',
 })
